@@ -8,17 +8,17 @@ from actioncable.connection import Connection
 from actioncable.subscription import Subscription
 from . import osc
 
-HOST = 'recurse.rctogether.com'
 
 async def listen():
     load_dotenv()
-    app_id = os.getenv("RC_APP_ID")
-    app_secret = os.getenv("RC_APP_SECRET")
-    query = urlencode({'app_id': app_id, 'app_secret': app_secret})
+    host = os.getenv('RC_HOST')
+    app_id = os.getenv('RC_APP_ID')
+    app_secret = os.getenv('RC_APP_SECRET')
 
+    query = urlencode({'app_id': app_id, 'app_secret': app_secret})
     connection = Connection(
-        url='wss://{}/cable?{}'.format(HOST, query),
-        origin='https://{}'.format(HOST),
+        url=f"wss://{host}/cable?{query}",
+        origin=f"https://{host}",
     )
     connection.connect()
 

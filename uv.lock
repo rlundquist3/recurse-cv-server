@@ -12,15 +12,6 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/cf/80/43a49e7a0dc830ba9712f0209ab01f21e42cfa85512291982054fbf9eb36/ActionCableZwei-0.1.7.2.tar.gz", hash = "sha256:cff4e15c5b8f1e58d1f263381d44ca4002521a6c22d6fd3ec58a1ae51178b682", size = 3198, upload-time = "2017-10-27T14:11:00.205Z" }
 
 [[package]]
-name = "oscpy"
-version = "0.6.0"
-source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/82/7c/789cfe254819e51dd544e558fd426efa3611f976694558a3c558b4cca73f/oscpy-0.6.0.tar.gz", hash = "sha256:0728a5a7266732c9d64630063d384911d5d6ae474416b79b78d4905773fb6d33", size = 18783, upload-time = "2021-06-21T21:34:29.529Z" }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/d9/97/84e4e1054ce4e4ce95511e4f74a5de4e61802faaeaa55638393f0116b66b/oscpy-0.6.0-py2.py3-none-any.whl", hash = "sha256:88de3f67bb21fa094f8b782641158bc763a0b96a74f8d7d26556ada6eb5b363a", size = 18495, upload-time = "2021-06-21T21:34:28.067Z" },
-]
-
-[[package]]
 name = "python-dotenv"
 version = "1.2.4"
 source = { registry = "https://pypi.org/simple" }
@@ -30,21 +21,30 @@ wheels = [
 ]
 
 [[package]]
+name = "python-osc"
+version = "1.10.2"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/a1/79/094503dc039c8ba9cead01f4b5e163d795a6a502563d3a31f35d20a1ecf8/python_osc-1.10.2.tar.gz", hash = "sha256:732548f4f467dda9f890a6b0b3bfb085ab117f4bd38a45a58d2ca0f3bd6a546d", size = 33716, upload-time = "2026-04-02T20:46:04.692Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/1f/a2/ce26e437e36707f0da839dd88b072413825ea8986b73ce7b5c4f3cd1b7f4/python_osc-1.10.2-py3-none-any.whl", hash = "sha256:018b28e1cc06427c2c3d695f4e8d87d0caecfe604ff889acc45235cfd94183a2", size = 45467, upload-time = "2026-04-02T20:46:03.718Z" },
+]
+
+[[package]]
 name = "recurse-cv-server"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [
     { name = "actioncablezwei" },
-    { name = "oscpy" },
     { name = "python-dotenv" },
+    { name = "python-osc" },
     { name = "websockets" },
 ]
 
 [package.metadata]
 requires-dist = [
     { name = "actioncablezwei", specifier = ">=0.1.7.2" },
-    { name = "oscpy", specifier = ">=0.6.0" },
     { name = "python-dotenv", specifier = ">=1.2.4" },
+    { name = "python-osc", specifier = ">=1.10.2" },
     { name = "websockets", specifier = ">=17.4" },
 ]
 
