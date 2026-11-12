@@ -1,5 +1,6 @@
-from . import rctogether
+import asyncio
+from . import rctogether, osc
 
-def main () -> None:
+async def main () -> None:
     print("Hello from recurse-cv-server!")
-    rctogether.listen()
+    await asyncio.gather(rctogether.listen(), osc.open())
