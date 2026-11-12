@@ -40,10 +40,10 @@ def handle_message(message):
         match entity_type:
             case 'Avatar':
                 print(f"event for {payload['person_name']}")
-                osc.send_message(1, 1)
+                osc.send_message(1, 0.5123)
             case 'Bot':
                 print(f"event for {payload['name']}")
-                osc.send_message(2, 1)
+                osc.send_message(2, 0.832442)
 
         """
         TODO: figure out potentially interesting ways to combine the data to send various CV
